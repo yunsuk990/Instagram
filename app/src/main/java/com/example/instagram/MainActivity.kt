@@ -9,13 +9,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-<<<<<<< Updated upstream
         setContentView(R.layout.activity_main)
-       
-        1333
-        return 
-
-=======
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -59,6 +53,5 @@ class MainActivity : AppCompatActivity() {
             }
             false
         }
->>>>>>> Stashed changes
     }
 }
