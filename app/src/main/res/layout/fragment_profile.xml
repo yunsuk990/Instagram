@@ -63,7 +63,6 @@
         android:id="@+id/info_userinfo_rl"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        app:layout_constraintTop_toEndOf="info_username_tv"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
@@ -81,7 +80,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="10dp"
-            app:layout_constraintStart_toEndof = "info_profile_image_ib">
+            android:orientation="horizontal">
 
             <LinearLayout
                 android:layout_weight="1"
@@ -203,7 +202,7 @@
         app:layout_constraintTop_toBottomOf="@id/info_profile_introduce_tv"
         app:layout_constraintStart_toStartOf="@id/info_profile_introduce_tv">
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/info_edit_profile_bt"
             android:layout_width="0dp"
             android:layout_height="40dp"
@@ -215,7 +214,7 @@
             android:text="프로필 편집"
             android:textSize="14sp"/>
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/info_share_profile_bt"
             android:layout_width="0dp"
             android:layout_height="40dp"
@@ -233,10 +232,7 @@
             android:layout_height="40dp"
             android:contentDescription="사람 찾아보기"
             android:src="@drawable/btn_find_people"/>
-
-
     </LinearLayout>
-
 
     <TextView
         android:id="@+id/info_story_highlight_tv"
@@ -272,9 +268,9 @@
 
         <ImageButton
             android:id="@+id/info_add_story_bt"
+            android:scaleType="fitXY"
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:background=""
             android:contentDescription="스토리 추가하기"
             android:src="@drawable/btn_add_story" />
 
