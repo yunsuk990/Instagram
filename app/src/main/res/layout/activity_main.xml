@@ -10,6 +10,7 @@
         android:id="@+id/main_fm"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:background="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/main_bottom_nav"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,6 +28,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/white"
         app:menu="@menu/menu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

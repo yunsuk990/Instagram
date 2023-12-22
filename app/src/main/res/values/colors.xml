@@ -2,4 +2,6 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="story">#C01CAC</color>
+    <color name="line">#D1D1D1</color>
 </resources>
