@@ -198,8 +198,8 @@
         app:layout_constraintTop_toBottomOf = "@+id/info_profile_username_tv"
         app:layout_constraintStart_toStartOf="@+id/info_profile_username_tv" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/info_profile_button_ll"
+    <LinearLayout
+        android:id="@+id/info_edit_profile"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginTop="20dp"
@@ -207,9 +207,9 @@
         android:layout_marginEnd="20dp"
         android:orientation="horizontal"
         app:layout_constraintTop_toBottomOf="@id/info_profile_introduce_tv"
-        app:layout_constraintStart_toStartOf="info_profile_introduce_tv">
+        app:layout_constraintStart_toStartOf="@id/info_profile_introduce_tv">
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/info_edit_profile_bt"
             android:layout_width="0dp"
             android:layout_height="40dp"
@@ -219,11 +219,9 @@
             android:gravity="center"
             android:orientation="horizontal"
             android:text="프로필 편집"
-            android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            android:textSize="14sp"/>
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/info_share_profile_bt"
             android:layout_width="0dp"
             android:layout_height="40dp"
@@ -233,21 +231,17 @@
             android:gravity="center"
             android:orientation="horizontal"
             android:text="프로필 공유"
-            android:textSize="14sp"
-            app:layout_constraint_Start_toEndof="@id/info_edit_profile_bt"
-            app:layout_constraintTop_toTopOf="@id/info_edit_profile_bt"/>
+            android:textSize="14sp"/>
 
         <ImageView
             android:id="@+id/info_find_people_bt"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:background=""
             android:contentDescription="사람 찾아보기"
-            android:src="@drawable/btn_find_people"
-            app:layout_constraint_Start_toEndof="@id/info_share_profile_bt"
-            app:layout_constraintTop_toTopOf="@id/info_edit_profile_bt"/>
+            android:src="@drawable/btn_find_people"/>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
 
     <TextView
         android:id="@+id/info_story_highlight_tv"
@@ -257,8 +251,8 @@
         android:text="스토리 하이라이트"
         android:textStyle="bold"
         android:textSize="12sp"
-        app:layout_constraintTop_toBottomOf="@id/info_profile_button_ll"
-        app:layout_constraintStart_toStartOf="@id/info_profile_button_ll"/>
+        app:layout_constraintTop_toBottomOf="@id/info_edit_profile"
+        app:layout_constraintStart_toStartOf="@id/info_edit_profile"/>
 
     <TextView
         android:id="@+id/info_add_story_tv"
