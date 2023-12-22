@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.instagram.databinding.ActivityMainBinding
 
+//conner
 class MainActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityMainBinding
