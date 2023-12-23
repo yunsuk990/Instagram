@@ -15,7 +15,7 @@
         android:layout_marginTop="50dp"
         android:textSize="22sp"
         android:textStyle="bold"
-        android:text="username"
+        android:text="@string/profile_userId"
         android:contentDescription="유저 이름"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -93,7 +93,7 @@
                     android:id="@+id/info_post_account_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="0"
+                    android:text="@string/profile_postNum"
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     android:textStyle="bold"/>
@@ -120,7 +120,7 @@
                     android:id="@+id/info_follower_account_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="0"
+                    android:text="@string/profile_followerNum"
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     android:textStyle="bold"/>
@@ -147,7 +147,7 @@
                     android:id="@+id/info_following_account_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="0"
+                    android:text="@string/profile_followingNum"
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     android:textStyle="bold"/>
@@ -172,7 +172,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="bold"
-        android:text="username"
+        android:text="@string/profile_userId"
         android:contentDescription="유저 이름"
         android:textSize="22sp"
         android:layout_marginTop="10dp"
