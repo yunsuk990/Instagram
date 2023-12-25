@@ -1,38 +1,41 @@
-package com.example.instagram
+package com.example.instagram.Profile
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.instagram.databinding.FragmentSearchBinding
+import com.example.instagram.R
+import com.example.instagram.SearchImageAdapter
+import com.example.instagram.databinding.FragmentInfoPostBinding
 
-class SearchFragment : Fragment() {
+class InfoPostFragment : Fragment() {
 
     private lateinit var recyclerView: RecyclerView
-    private lateinit var imageAdapter: SearchImageAdapter // SearchImageAdapter는 Image를 불러오고 이벤트를 처리하는 adapter이다.
-    lateinit var binding: FragmentSearchBinding
+    private lateinit var postAdapter: InfoPostAdapter // SearchImageAdapter는 Image를 불러오고 이벤트를 처리하는 adapter이다.
+    private lateinit var binding : FragmentInfoPostBinding
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentSearchBinding.inflate(layoutInflater)
+        binding = FragmentInfoPostBinding.inflate(inflater, container, false)
 
-        // searchFragment의 recyclerview를 GridLayout(가로3)으로 설정
-        recyclerView = binding.searchRecyclerView
+        // InfoPostFragment 의 recyclerview 를 GridLayout(가로:3) 으로 설정
+        recyclerView = binding.infoPostRecyclerView
         recyclerView.layoutManager = GridLayoutManager(requireContext(), 3)
 
-        // recyclerView와 getImageList()에 저장한 이미지 리소스 리스트를 SearchImageAdapter로 연결
-        imageAdapter = SearchImageAdapter(getImageList())
-        recyclerView.adapter = imageAdapter
+        // recyclerView 와 getImageList() 에 저장한 이미지 리소스를 InfoPostAdapter 로 연결
+        postAdapter = InfoPostAdapter(getPostList())
+        recyclerView.adapter = postAdapter
 
         return binding.root
     }
 
-    private fun getImageList(): List<Int>{
+    private fun getPostList(): List<Int> {
         return listOf(
             R.drawable.grid1,
             R.drawable.grid2,
@@ -59,7 +62,7 @@ class SearchFragment : Fragment() {
             R.drawable.android_logo,
             R.drawable.grid2,
             R.drawable.grid1,
-            R.drawable.grid2,
+            R.drawable.grid2
         )
     }
 }
