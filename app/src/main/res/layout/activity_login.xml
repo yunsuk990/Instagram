@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/login_Instagram_logo_iv"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="150dp"
+        android:src="@drawable/instagram_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 첫 번째 CardView -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/login_id_cardView"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="50dp"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/login_Instagram_logo_iv">
+
+        <!-- 아이디 입력란 -->
+        <EditText
+            android:id="@+id/login_edit_id_et"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="사용자 이름, 이메일 주소 또는 휴대폰 번호"
+            android:textSize="19sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/transparent"
+            android:inputType="textEmailAddress" />
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- 두 번째 CardView -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/login_password_cardView"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/login_id_cardView">
+
+        <!-- 비밀번호 입력란 -->
+        <EditText
+            android:id="@+id/login_edit_password_et"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="비밀번호"
+            android:textSize="19sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/transparent"
+            android:inputType="textPassword" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/login_sign_in_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="로그인"
+        android:background="@drawable/rounded_layout_blue"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_password_cardView" />
+
+    <TextView
+        android:id="@+id/login_forgot_password_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="비밀번호를 잊으셨나요?"
+        android:gravity="center"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/login_sign_in_btn" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/login_sign_up_new_account_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="20dp"
+        android:text="새 계정 만들기"
+        android:background="@drawable/rounded_layout_blue_stroke"
+        android:textColor="@color/blue"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/login_meta_iv" />
+
+    <ImageView
+        android:id="@+id/login_meta_iv"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/meta"
+        app:layout_constraintOf="@+id/login_sign_up_new_account_btn"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
