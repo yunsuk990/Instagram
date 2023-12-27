@@ -55,4 +55,11 @@ dependencies {
 
     //recyclerview 의존성 추가
     implementation ("androidx.recyclerview:recyclerview:1.2.1")
+
+    //Glide
+    implementation ("com.github.bumptech.glide:glide:4.16.0")
+
+    //CircleIndicator
+    implementation("me.relex:circleindicator:2.1.6")
+
 }
