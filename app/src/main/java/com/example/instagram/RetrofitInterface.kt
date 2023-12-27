@@ -12,12 +12,17 @@ import retrofit2.http.Body
 interface RetrofitInterface {
 
 
+
     @GET("/api/post/home")
     fun getHomePosts(
         @Header("Authorization") token: String
     ): Call<posts>
 
-    //SignUp
+    // SignUp
     @POST("/api/user/join")
     fun signUp(@Body user: User): Call<SignUpResponse>
+
+    // Login
+    @POST("/api/user/login")
+    fun login(@Body user: User): Call<SignUpResponse>
 }
