@@ -1,9 +1,7 @@
 package com.example.instagram.model
 
-import androidx.room.Entity
 import com.google.gson.annotations.SerializedName
 //유저 정보 테이블
-@Entity(tableName = "UserTable")
 data class User(
     @SerializedName(value = "userName") var name : String,
     @SerializedName(value = "userId") var id : String,
