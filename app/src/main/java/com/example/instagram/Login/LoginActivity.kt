@@ -8,6 +8,7 @@ import com.example.instagram.MainActivity
 import com.example.instagram.SignUpActivity
 import com.example.instagram.databinding.ActivityLoginBinding
 import com.example.instagram.model.AuthService
+import com.example.instagram.model.Login
 import com.example.instagram.model.LoginView
 import com.example.instagram.model.Result
 import com.example.instagram.model.SignUpResponse
@@ -48,10 +49,7 @@ class LoginActivity : AppCompatActivity(), LoginView {
         val authService = AuthService()
         authService.setLoginView(this)
 
-        authService.login(User("",id,"", password))   // API 호출
-
-        // null 인지 아닌지 확인
-        Toast.makeText(this, "회원 정보가 존재하지 않습니다.", Toast.LENGTH_SHORT).show()
+        authService.login(Login(id,password))   // API 호출
     }
 
     private fun saveJwt(jwt: String) {
@@ -69,12 +67,8 @@ class LoginActivity : AppCompatActivity(), LoginView {
     }
 
     override fun onLoginSuccess(code: String, result: Result) {
-        when (code) {
-            "COMMON200" -> {
-                saveJwt(result.jwt)
-                startMainActivity()
-            }
-        }
+        saveJwt(result.jwt)
+        startMainActivity()
     }
 
     override fun onLoginFailure(resp: SignUpResponse) {

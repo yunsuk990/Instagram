@@ -24,7 +24,7 @@ class InfoTagFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        updateUserProfile(User("yunsuk","yunsuk990","안녕하세요",""))
+//        updateUserProfile(User("yunsuk","yunsuk990","안녕하세요",""))
         binding = FragmentInfoTagBinding.inflate(inflater, container, false)
         return binding.root
     }

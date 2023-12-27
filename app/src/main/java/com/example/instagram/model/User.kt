@@ -21,3 +21,8 @@ data class User(
     @SerializedName(value = "userEmail") var email : String,
     @SerializedName(value = "userPwd") var password : String,
 )
+
+data class Login(
+    @SerializedName(value = "userInfo") var id : String,
+    @SerializedName(value = "userPwd") var password : String
+)

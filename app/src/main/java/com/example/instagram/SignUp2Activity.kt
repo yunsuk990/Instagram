@@ -2,8 +2,10 @@ package com.example.instagram
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.instagram.Login.LoginActivity
 import com.example.instagram.databinding.ActivitySignup2Binding
 import com.example.instagram.model.AuthService
 import com.example.instagram.model.SignUpView
@@ -27,11 +29,12 @@ class SignUp2Activity: AppCompatActivity(), SignUpView {
     //입력받은 정보를 User타입으로 기입
     private fun getUser(): User {
         val email:String = (intent.getStringExtra("email")).toString()
+        Log.d("email", email)
         val pwd:String = binding.signUp2PasswordInputEt.text.toString()
         val name: String = binding.signUp2NameInputEt.text.toString()
         val id: String = getId(email)
 
-        return User(name, email, pwd, id)
+        return User(name, id, email, pwd)
     }
 
     //입력받은 이메일에서 @앞부분을 출력하는 코드
@@ -61,7 +64,7 @@ class SignUp2Activity: AppCompatActivity(), SignUpView {
     }
 
     override fun onSignUpSuccess() {
-        val intent = Intent(this, MainActivity::class.java)
+        val intent = Intent(this, LoginActivity::class.java)
         startActivity(intent)
     }
 

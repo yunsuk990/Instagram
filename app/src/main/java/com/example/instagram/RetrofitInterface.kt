@@ -1,5 +1,6 @@
 package com.example.instagram
 
+import com.example.instagram.model.Login
 import com.example.instagram.model.Response
 import com.example.instagram.model.User
 import com.example.instagram.model.posts
@@ -34,6 +35,6 @@ interface RetrofitInterface {
 
     // Login
     @POST("/api/user/login")
-    fun login(@Body user: User): Call<SignUpResponse>
+    fun login(@Body user: Login): Call<SignUpResponse>
 
 }
