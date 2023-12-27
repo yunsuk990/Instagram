@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.instagram.MainActivity
+import com.example.instagram.SignUpActivity
 import com.example.instagram.databinding.ActivityLoginBinding
 import com.example.instagram.model.AuthService
 import com.example.instagram.model.LoginView
@@ -25,9 +26,9 @@ class LoginActivity : AppCompatActivity(), LoginView {
             login()
         }
 
-        /*binding.loginSignUpNewAccountBtn.setOnClickListener {
+        binding.loginSignUpNewAccountBtn.setOnClickListener {
             startActivity(Intent(this, SignUpActivity::class.java))
-        }*/
+        }
     }
 
     // 로그인 함수

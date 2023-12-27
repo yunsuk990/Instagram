@@ -15,7 +15,6 @@
         android:theme="@style/Base.Theme.Instagram"
         tools:targetApi="31">
         <activity
-            android:name=".SignUpActivity"
             android:name=".Login.LoginActivity"
             android:exported="true">
             <intent-filter>
@@ -24,9 +23,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
 
-        </activity>
+        <activity android:name=".MainActivity"> </activity>
+        <activity android:name=".SignUpActivity"> </activity>
+        <activity android:name=".SignUp2Activity"> </activity>
 
     </application>
 
