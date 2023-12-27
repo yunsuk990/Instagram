@@ -53,10 +53,12 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
-
-
+    
     //recyclerview 의존성 추가
     implementation ("androidx.recyclerview:recyclerview:1.2.1")
+
+    //CircleIndicator
+    implementation("me.relex:circleindicator:2.1.6")
 
     // GSON
     implementation ("com.google.code.gson:gson:2.8.5")
@@ -76,4 +78,5 @@ dependencies {
     // Glide
     implementation("com.github.bumptech.glide:glide:4.11.0")
     annotationProcessor("com.github.bumptech.glide:compiler:4.11.0")
+
 }
