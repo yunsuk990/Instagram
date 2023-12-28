@@ -21,6 +21,7 @@ class SearchFragment : Fragment() {
     ): View? {
         binding = FragmentSearchBinding.inflate(layoutInflater)
 
+
         // searchFragment의 recyclerview를 GridLayout(가로3)으로 설정
         recyclerView = binding.searchRecyclerView
         recyclerView.layoutManager = GridLayoutManager(requireContext(), 3)

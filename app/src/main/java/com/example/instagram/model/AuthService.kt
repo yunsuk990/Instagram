@@ -27,6 +27,7 @@ class AuthService {
             override fun onResponse(call: Call<SignUpResponse>, response: Response<SignUpResponse>) {
                 Log.d("SIGNUP/SUCCESS", response.toString())
                 val resp: SignUpResponse = response.body()!!
+                Log.d("resp", resp.toString())
                 when(resp.returnCode){
                     "COMMON200" -> signUpView.onSignUpSuccess() //returnCode의 값이 COMMON200일 때 회원가입 성공
                     else -> signUpView.onSignUpFailure(resp.returnMsg)
@@ -40,7 +41,7 @@ class AuthService {
         }) //user 의 정보로 API호출
     }
 
-    fun login(user: User){
+    fun login(user: Login){
         // 로그인 API 를 호출함 : 어떤 주소로 들어가겠다
         val authService = getRetrofit().create(RetrofitInterface::class.java)
 
@@ -56,7 +57,7 @@ class AuthService {
                 Log.d("Login/SUCCESS", response.toString())
                 val resp: SignUpResponse = response.body()!!      // body 가 정보가 들어있는 곳
                 when (val code = resp.returnCode) {
-                    "USER4041" -> loginView.onLoginSuccess(code, resp.result!!)
+                    "COMMON200" -> loginView.onLoginSuccess(code, resp.result!!)
                     else -> loginView.onLoginFailure(resp)
                 }
             }
