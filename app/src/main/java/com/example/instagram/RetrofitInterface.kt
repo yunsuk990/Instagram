@@ -7,6 +7,7 @@ import com.example.instagram.model.posts
 import retrofit2.Call
 import retrofit2.http.Body
 import com.example.instagram.model.SignUpResponse
+import com.example.instagram.model.UpdateUser
 import com.example.instagram.model.UserInfo
 import retrofit2.http.GET
 import retrofit2.http.Header
@@ -26,7 +27,7 @@ interface RetrofitInterface {
 
     @PATCH("/api/user/mod")
     fun updateUserInfo(
-        @Body user: User,
+        @Body user: UpdateUser,
         @Header("Authorization") token: String
     ): Call<Response>
 
