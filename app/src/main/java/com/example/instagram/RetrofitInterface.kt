@@ -7,6 +7,7 @@ import com.example.instagram.model.posts
 import retrofit2.Call
 import retrofit2.http.Body
 import com.example.instagram.model.SignUpResponse
+import com.example.instagram.model.UserInfo
 import retrofit2.http.GET
 import retrofit2.http.Header
 import retrofit2.http.Headers
@@ -28,6 +29,13 @@ interface RetrofitInterface {
         @Body user: User,
         @Header("Authorization") token: String
     ): Call<Response>
+
+    //GetUserInfo
+    @GET("/api/user/profile")
+    @Headers("Content-Type:application/json; charset=utf-8")
+    fun getUserInfo(
+        @Header("Authorization") token: String
+    ): Call<UserInfo>
 
     // SignUp
     @POST("/api/user/join")

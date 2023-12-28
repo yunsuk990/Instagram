@@ -31,8 +31,8 @@
         </activity>
 
         <activity android:name=".MainActivity"> </activity>
-        <activity android:name=".SignUpActivity"> </activity>
-        <activity android:name=".SignUp2Activity"> </activity>
+        <activity android:name=".SignUp.SignUpActivity"> </activity>
+        <activity android:name=".SignUp.SignUp2Activity"> </activity>
 
     </application>
 

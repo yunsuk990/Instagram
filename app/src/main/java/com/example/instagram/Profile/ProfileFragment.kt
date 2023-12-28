@@ -7,12 +7,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import com.bumptech.glide.Glide
 import com.example.instagram.R
 import com.example.instagram.RetrofitInterface
 import com.example.instagram.databinding.FragmentProfileBinding
 import com.example.instagram.getRetrofit
+import com.example.instagram.model.Info
 import com.example.instagram.model.Response
 import com.example.instagram.model.User
+import com.example.instagram.model.UserInfo
+import com.example.instagram.model.posts
 import com.google.android.material.tabs.TabLayoutMediator
 import retrofit2.Call
 import retrofit2.Callback
@@ -39,7 +43,46 @@ class ProfileFragment : Fragment() {
             tab.setIcon(tabIconList[position])
         }.attach()
 
+        getUserProfile()
+
         return binding.root
+    }
+
+    private fun getUserProfile(){
+        val service = getRetrofit().create(RetrofitInterface::class.java)
+        Log.d("jwt", getJwt().toString())
+        getJwt()?.let { service.getUserInfo(it).enqueue(object: Callback<UserInfo>{
+            override fun onResponse(call: Call<UserInfo>, response: retrofit2.Response<UserInfo>) {
+                val resp = response.body()!!
+                Log.d("getUserInfo_resp", resp?.returnCode.toString())
+                when(resp.returnCode){
+                    "COMMON200" -> {
+                        Log.d("getUserInfo[SUCCESS]", resp.result.toString())
+                        setUserInfo(resp.result)
+                    }
+                    else -> Log.d("getUserInfo[Failure]", "Jwt Not Exist")
+                }
+            }
+
+            override fun onFailure(call: Call<UserInfo>, t: Throwable) {
+                Log.d("getUserInfo: onFailure", t.message.toString())
+            }
+
+        })}
+    }
+
+    private fun setUserInfo(info: Info){
+        //userName
+        binding.infoUserIdTv.text = info.userName
+        binding.infoProfileUserIdTv.text = info.userName
+        //post
+        binding.infoPostNumTv.text = info.postNum.toString()
+        //follower
+        binding.infoFollowerNumTv.text = info.followerNum.toString()
+        //following
+        binding.infoFollowingNumTv.text = info.followingNum.toString()
+        //image
+        Glide.with(this).load(info.userProfileImg).into(binding.infoProfileImageIb)
     }
 
     fun updateUserProfile(user: User){

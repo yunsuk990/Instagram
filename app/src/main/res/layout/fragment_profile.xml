@@ -9,7 +9,7 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/info_username_tv"
+        android:id="@+id/info_userId_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
@@ -29,9 +29,9 @@
         android:contentDescription="다른 프로필 선택"
         android:scaleType="fitXY"
         android:src="@drawable/btn_username_dropdown"
-        app:layout_constraintBottom_toBottomOf="@+id/info_username_tv"
-        app:layout_constraintStart_toEndOf="@+id/info_username_tv"
-        app:layout_constraintTop_toTopOf="@+id/info_username_tv" />
+        app:layout_constraintBottom_toBottomOf="@+id/info_userId_tv"
+        app:layout_constraintStart_toEndOf="@+id/info_userId_tv"
+        app:layout_constraintTop_toTopOf="@+id/info_userId_tv" />
 
     <ImageView
         android:id="@+id/info_add_post_ib"
@@ -55,7 +55,7 @@
         android:src="@drawable/btn_icon_burger"
         app:layout_constraintBottom_toBottomOf="@+id/info_username_tv"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/info_username_tv" />
+        app:layout_constraintTop_toTopOf="@+id/info_userId_tv" />
 
     <RelativeLayout
         android:id="@+id/info_userinfo_rl"
@@ -64,7 +64,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="20dp"
-        app:layout_constraintTop_toBottomOf="@id/info_username_tv">
+        app:layout_constraintTop_toBottomOf="@id/info_userId_tv">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -89,7 +89,7 @@
 
 
                 <TextView
-                    android:id="@+id/info_post_account_tv"
+                    android:id="@+id/info_postNum_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/profile_postNum"
@@ -117,7 +117,7 @@
                 android:layout_height="wrap_content" >
 
                 <TextView
-                    android:id="@+id/info_follower_account_tv"
+                    android:id="@+id/info_followerNum_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/profile_followerNum"
@@ -145,7 +145,7 @@
                 android:layout_height="wrap_content" >
 
                 <TextView
-                    android:id="@+id/info_following_account_tv"
+                    android:id="@+id/info_followingNum_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/profile_followingNum"
@@ -169,7 +169,7 @@
     </RelativeLayout>
 
     <TextView
-        android:id="@+id/info_profile_username_tv"
+        android:id="@+id/info_profile_userId_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="bold"
@@ -188,8 +188,8 @@
         android:visibility="gone"
         android:textSize="20sp"
         android:layout_marginTop="2dp"
-        app:layout_constraintTop_toBottomOf = "@+id/info_profile_username_tv"
-        app:layout_constraintStart_toStartOf="@+id/info_profile_username_tv" />
+        app:layout_constraintTop_toBottomOf = "@+id/info_profile_userId_tv"
+        app:layout_constraintStart_toStartOf="@+id/info_profile_userId_tv" />
 
     <LinearLayout
         android:id="@+id/info_edit_profile"

@@ -5,14 +5,13 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.instagram.MainActivity
-import com.example.instagram.SignUpActivity
+import com.example.instagram.SignUp.SignUpActivity
 import com.example.instagram.databinding.ActivityLoginBinding
 import com.example.instagram.model.AuthService
 import com.example.instagram.model.Login
 import com.example.instagram.model.LoginView
 import com.example.instagram.model.Result
 import com.example.instagram.model.SignUpResponse
-import com.example.instagram.model.User
 
 class LoginActivity : AppCompatActivity(), LoginView {
     lateinit var binding: ActivityLoginBinding

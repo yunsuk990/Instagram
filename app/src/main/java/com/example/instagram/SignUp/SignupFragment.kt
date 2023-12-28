@@ -1,4 +1,4 @@
-package com.example.instagram
+package com.example.instagram.SignUp
 
 import android.os.Bundle
 import android.view.LayoutInflater
