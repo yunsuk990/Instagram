@@ -15,11 +15,7 @@
         android:theme="@style/Base.Theme.Instagram"
         tools:targetApi="31">
         <activity
-<<<<<<< HEAD
-            android:name=".SignUpActivity"
-=======
             android:name=".Login.LoginActivity"
->>>>>>> 778501e968d304b233af270640b34b2392bbefdb
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,14 +23,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-<<<<<<< HEAD
         <activity android:name=".MainActivity">
-
+        </activity>
+        <activity android:name=".SignUpActivity">
         </activity>
 
-=======
-        <activity android:name=".MainActivity"/>
->>>>>>> 778501e968d304b233af270640b34b2392bbefdb
     </application>
 
 </manifest>
