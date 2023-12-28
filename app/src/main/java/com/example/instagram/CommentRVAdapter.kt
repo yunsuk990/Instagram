@@ -17,7 +17,7 @@ class CommentRVAdapter(val items: ArrayList<comment>): RecyclerView.Adapter<Comm
 
     override fun onBindViewHolder(holder: CommentRVAdapter.ViewHolder, position: Int) {
         holder.binding.itemCommentNicknameTv.text = items[position].userID
-        holder.binding.itemCommentNicknameCommentTv.text = items[position].comentContents
+        holder.binding.itemCommentNicknameCommentTv.text = items[position].commentContents
     }
 
     override fun getItemCount(): Int = items.size

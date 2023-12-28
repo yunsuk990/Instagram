@@ -2,6 +2,6 @@ package com.example.instagram.model
 
 data class comment(
     val commentIdx: Int,
-    val comentContents: String,
+    val commentContents: String,
     val userID: String
 )
